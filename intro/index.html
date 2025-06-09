@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React owo</title>
+</head>
+<body>   
+
+<div id="root"></div>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script type="text/babel"> 
+
+    const divRoot = document.getElementById("root");
+    const root = ReactDOM.createRoot(divRoot);
+    //Renderizar/Pintar/construir/montar/hidratar
+    //Re-Renderizar/ Actualizar/Re-hidratar/Re-hidratacion
+
+    //vamos a tomar jsx como un elemento mas
+    // JSX NO ES HTML!!!! `(*>﹏<*)′
+    // DX viene de la palabra ux (desarrollo experiencia)
+    //incrustar- Que? -> Expresiones -  Donde? -> JSX
+    // SINTAXIS ->  {acá va la expresión }
+    //una variable es una expresion!!!!!!
+    //los operadores son expresiones
+    //JSX TAMBIEN ES UNA EXPRESION
+    // el if NO ES una expresion (asi que no va a servir)
+
+    
+    const nombre = "Juan";
+    const edad = 17;
+
+/*     const body = (
+    <>    
+    <h1>HOLI MUNDOOO HIIIII :3 {nombre}</h1>
+    <h2>subtitulo..</h2>
+    <h3>{edad >= 18 ? "podes pasar " + nombre : "no pASAS " + nombre}</h3>
+     </>
+);
+
+const app =  (
+    <>
+    
+
+    {body}
+    </>
+); */
+
+
+
+//tenemos un padre y un padre imaginario 
+    //Donde renderizamos? en la raiz.
+//
+
+/* names = [
+
+susana,
+juan,
+
+]
+const app = (
+ <ul>
+     { names.app ((n)=> ( //falta return
+    <li> {n} </li>))}
+    </ul>
+);
+    root.render(app); */
+ // Un elemento JSX /componente debe UNICAMENTE renderizar uno y SOLO UNO elemento JSX (⊙﹏⊙)
+// porque si trabajamos con el dom no es posible tener mas de un padre :3 :3 :3 :3
+
+const body = (
+<>
+<h1>Bienvenido</h1>
+<p>Como estas?</p>
+<img src="https://imgs.search.brave.com/wIhJL461RiTuqBWrWQVCf2NzoO60f7bxs7A2gVWOaso/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9zdDUu/ZGVwb3NpdHBob3Rv/cy5jb20vMTAwMDY5/NS82OTAwMi9pLzQ1/MC9kZXBvc2l0cGhv/dG9zXzY5MDAyMzY1/NC1zdG9jay1waG90/by1zbWFsbC1icm93/bi1raXR0ZW4taXNv/bGF0ZWQtd2hpdGUu/anBn" alt="gatito"/>
+ </>
+);
+
+const wiwi =(
+    <>
+    {body}
+    {body}
+    
+    {body}
+    
+    </>
+);
+const app = (
+    <>
+<fieldset>
+    {wiwi}
+    <legend>gatito</legend>
+    </fieldset>  
+    <button> like</button>
+    </>
+    
+)
+    root.render(app)
+</script>
+</body>
+</html>
