@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React owo</title>
+</head>
+<body>   
+
+<div id="root"></div>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script type="text/babel"> 
+
+    const divRoot = document.getElementById("root");
+    const root = ReactDOM.createRoot(divRoot);
+   // en esta clase vamos a incoorporar los componentes, los cuales van a ver 2
+   //componentes de clase y componentes funcioones, los primeros no se untilizan mucho, los funcionales si y son los que vamos a usar 
+   //vamos a crear nuestro primer componente:
+   //se vuekve un componente porque retornar JSX   
+   //los componentes debes usar PASCAL CASE y solo PASCAL CASE. (osea que empiezan con mayusculas)❗❗❗❗
+   
+   //function MiPrimerComponente() {
+//    /7return <h1>HOLA MUNDO</h1>
+  // }
+   
+
+
+   
+
+
+//const app = (
+
+//<div>
+  //  <MiPrimerComponente/>
+    //</div>
+//)
+    
+//PROPS abreviaciones de propiedades -> atributos la forma de pasarle un parametro a una funcion como un componente es :
+//un componente de momento solo recibe un parametro, un props es un objeto, que tiene /* muchas propiedades como lo dice su nombre
+
+
+
+
+function Bienvenida ({nombre }){
+    <>
+<h1>hola bienvenido {nombre}!</h1>
+
+
+</>
+}
+
+//como hacemos si tenemos el nombre en una variable??
+
+//const miEdad = 16;
+const nombres = ["juan", "pepe", "maria"];
+function App(){
+
+    return <Bienvenida nombre = "juan">
+        <i>soy un hijo</i>
+        </Bienvenida>
+        
+        
+} ;
+//SEMANTICA le damos una key de nombre a nombre ssdsdsff
+//como en js son mutables, react cuando reenderiza un componente necesita saber q elemento era antes y cual era despues, por eso le da una denominacion a cada uno y eso se lo denomina key.
+//supngamos q tenemos un conjunto de caramelos solemos asociar el color por el sabor
+//y react necesita saber el "color" de los componentes para identificarlos
+//react tiene la key (que es una prop)especial y que sirve para IDENTIFICAR COMPONENTES 
+
+//una key debe ser unica 
+//las key son para react y se usan especialmente cunado tenemos componentes del tipo lista :)))))))
+//puedo reenderizar mi componente,con un root.render(<MiPrimerComponente/>)
+
+
+// si yo tengo hr, con un h1 
+// la segunda prop especial de react es el parametro CHILDREN el cual puede ser cualquier etiqueta/componente/etc que hay 
+//¿como se usa ese children? lo ponemos entre kkaves {}
+//para que srive ese children? 
+    root.render(<App/>)
+</script>
+</body>
+</html>
